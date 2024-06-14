@@ -1,0 +1,31 @@
+.box-input{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 6px;
+} 
+
+.form-control { 
+    border: 1px solid #848484; 
+    border-radius: 0.3rem;
+    padding-top: 0.6rem; 
+    padding-bottom: 0.6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 5px 0;
+    font-family: "Raleway", sans-serif;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-weight: 400;
+    width: 380px; 
+}
+ 
+.label-input{
+    /* font-size: 14px; */
+    font-weight: 500;
+    font-size: 0.975rem;
+    line-height: 1.25rem;
+    margin-bottom: 0.5rem;
+    /* margin-bottom: 5px; */
+}
+ 

@@ -1,0 +1,11 @@
+ 
+.textInput:focus {
+    border-color: #233142; /* Cambia el color del borde al obtener el foco */
+    outline: none; /* Elimina el outline predeterminado */
+  } 
+
+.text-error{
+    margin-top: 4px;
+    color: #dc2f2f;
+    font-size: 14px;
+} 

@@ -1,0 +1,40 @@
+.tanInput{
+    border: 1px solid #848484; 
+    border-radius: 0.3rem;
+    margin: 5px 0;
+    /* font-family: "Raleway", sans-serif; */
+    box-sizing: border-box;
+    width: 380px; 
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+} 
+
+.selectedTabActive{
+    width: 50%; 
+    background-color: #232538;
+    color: white; 
+    border-radius: 0.3rem;    
+    padding-top: 0.6rem; 
+    padding-bottom: 0.6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+}
+
+.selectedTabInactive{
+    width: 50%; 
+    background-color: #fff;
+    color: '#232538'; 
+    border-radius: 0.3rem;    
+    padding-top: 0.6rem; 
+    padding-bottom: 0.6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+}
+        
+.textTab{
+    font-size: 100%;
+    font-weight: 400; 
+}
