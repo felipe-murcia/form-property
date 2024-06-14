@@ -19,7 +19,7 @@ function Index() {
   return (
     <div className="container" > 
         <BaseCard>
-            <h1>Base de card {price}</h1>
+            <h1>Formulario de propiedad</h1>
              <Logotipo />
             <div style={{display:'flex', flexDirection:'column', alignItems:'center', padding:50}}>            
               <TabInput label={'Tipo de oferta'} value={type_offer} data={arrayTypeOffer} onChange={(value)=>dispatch(setTypeOffer(value))} />
