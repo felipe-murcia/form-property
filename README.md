@@ -4,6 +4,10 @@ Proyecto desarrollado en React con TypeScript, integrando la librería Redux Too
 
 Project developed in React with TypeScript, integrating the Redux Toolkit library to manage the global variable. The idea of the project is a form on the topic of property, which uses a step-by-step component (stepper) to guide the user through the process. The global variable management and the design of the form are implemented with a unique style.
 
+![Descripción de la imagen](./demo/propiedad.png)
+
+![Descripción de la imagen](./demo/resultado.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
