@@ -1,32 +1,35 @@
 import React, { useContext } from 'react'; 
 import './index.css';
-import { BaseCard } from '../components/BaseCard';
-import { useDispatch, useSelector } from 'react-redux';
+import { BaseCard } from '../components/BaseCard'; 
+import { colorBackground } from '../constant/global'; 
+ 
+import Stepline from '../components/Stepline'; 
+import { StepForm } from '../components/Formstep';
 import { RootState } from '../redux/store';
-import TextInput from '../components/TextInput';
-import SelectInput from '../components/SelectInput';
-import TextAreaInput from '../components/TextAreaInput';
-import TabInput from '../components/TabInput';
-import { arrayTypeOffer, arrayTypeProperty } from '../constant/global';
-import { setDescription, setPrice, setTypeOffer, setTypeProperty } from '../features/property/propertySlice';
-import Logotipo from '../components/Logo';
+import { useSelector } from 'react-redux';
+import fondoImagen from '../assets/fondo/4575.jpg'; // Ruta de la imagen de fondo
 
-function Index() {
-
-  const { description, type_offer, type_property, price } = useSelector((state: RootState) => state.property);
-  const dispatch = useDispatch();
-  
+function Index() { 
+  const { step } = useSelector((state: RootState) => state.form);
   return (
     <div className="container" > 
         <BaseCard>
-            <h1>Formulario de propiedad</h1>
-             <Logotipo />
-            <div style={{display:'flex', flexDirection:'column', alignItems:'center', padding:50}}>            
-              <TabInput label={'Tipo de oferta'} value={type_offer} data={arrayTypeOffer} onChange={(value)=>dispatch(setTypeOffer(value))} />
-              <SelectInput label={'Tipo de inmueble'} value={type_property} data={arrayTypeProperty} onChange={(value)=>dispatch(setTypeProperty(value))} />
-              <TextInput label={'Precio'} id={'price'} value={price} onChange={(value)=>dispatch(setPrice(Number(value)))}  />
-              <TextAreaInput label={'Descripcion'} value={description} onChange={(value)=>dispatch(setDescription(value))}  />
-            </div>
+
+        <div style={{ display:'flex', flexDirection:'row'}}>
+
+          <div style={{  flex:2, backgroundColor:colorBackground, alignContent:'center',
+            backgroundImage: step>=5?`url(${fondoImagen})`:'none',  // Establece la imagen como fondo
+            backgroundSize: 'cover',                   // Cubre todo el contenedor
+            backgroundPosition: 'center',
+          }}>
+              <Stepline />
+          </div>
+              
+          <div style={{ flex:3, backgroundColor:'white', textAlign:'center', paddingTop:20,}}> 
+               <StepForm />
+          </div>
+
+        </div> 
 
         </BaseCard>
     </div>

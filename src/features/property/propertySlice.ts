@@ -1,6 +1,6 @@
 // features/user/userSlice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { TypeOffer, TypeProperty } from '../../constant/global';
+import { feature, TypeOffer, TypeProperty } from '../../constant/global';
 
 interface PropertyState { 
   description: string;
@@ -10,8 +10,8 @@ interface PropertyState {
   bathroom: number;
   bedroom: number;
   area: number;
-  features: [];
-  images:[]
+  features: feature[];
+  images:string[]
 }
 
 const initialState: PropertyState = {
@@ -19,7 +19,7 @@ const initialState: PropertyState = {
   price: null,
   type_property: null,
   type_offer: 'Arriendo',
-  bathroom: 12,
+  bathroom: 0,
   bedroom: 0,
   area: 0,
   features: [],
@@ -42,9 +42,26 @@ export const propertySlice = createSlice({
     setPrice: (state, action: PayloadAction<number>) => {
       state.price = action.payload;
     },
+    setBedroom: (state, action: PayloadAction<number>) => {
+      state.bedroom = action.payload;
+    },
+    setBathroom: (state, action: PayloadAction<number>) => {
+      state.bathroom = action.payload;
+    },
+    setArea: (state, action: PayloadAction<number>) => {
+      state.area = action.payload;
+    },
+    setFeatures: (state, action: PayloadAction<feature[]>) => {
+      state.features = action.payload;
+    },
+    setImages: (state, action: PayloadAction<string[]>) => {
+      state.images = action.payload;
+    },
   },
 });
 
-export const { setDescription, setPrice, setTypeOffer, setTypeProperty } = propertySlice.actions;
+export const { setDescription, setPrice, setTypeOffer, setTypeProperty,
+  setBedroom, setArea, setBathroom, setFeatures, setImages
+ } = propertySlice.actions;
 
 export default propertySlice.reducer;

@@ -1,5 +1,5 @@
 import React from 'react'; 
-import { ReactComponent as Logo } from '../../assets/images/logo/logoipsum-239.svg';
+import { ReactComponent as Logo } from '../../assets/images/logo/logoipsum-252.svg';
 
 const Logotipo  = () => {
   return ( 

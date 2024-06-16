@@ -1,0 +1,17 @@
+
+.card-feat{
+    width:80%;
+    border-radius:10px;
+    /* background-color:colorBackground,  */
+    /* border-width:1px;  */
+    cursor:pointer;
+    /* border-style:solid; */
+    /* border-color:'colorPrimary';  */
+    padding:10px;
+    margin-bottom:10px;
+    padding-left:20px;
+    display:flex; 
+    flex-direction:row;
+    justify-content:space-between; 
+    align-items:center
+}
