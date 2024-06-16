@@ -8,6 +8,9 @@ Project developed in React with TypeScript, integrating the Redux Toolkit librar
 
 ![Descripción de la imagen](./demo/resultado.png)
 
+<img src="./demo/propiedad.png" alt="Descripción de la imagen" width="300"/>
+
+
 ## Available Scripts
 
 In the project directory, you can run:
